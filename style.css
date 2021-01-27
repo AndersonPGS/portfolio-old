@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #55d086;
+    --secondary-color: #67ddef;
+    --primary-glass: rgba(255,255,255,0.7);
+    --secondary-glass: rgba(255,255,255,0.3);
+    --primary-text: #426696;
+    --secondary-text: #658ec6;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100%;
+    background: linear-gradient(to right top, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+}
+
+h1{
+    color: var(--primary-text);
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+}
+h2,p{
+    color: var(--secondary-text);
+    font-weight: 500;
+    opacity: 0.8;
+}
+h3{
+    color: var(--primary-text);
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+main{
+    background: white;
+    min-height: 80vh;
+    width: 60%;
+    background: linear-gradient(to right bottom, var(--primary-glass), var(--secondary-glass));
+    border-radius: 1.5rem;
+    z-index: 5;
+    backdrop-filter: blur(2rem);
+    display: flex;
+}
+
+.circle1,.circle2{
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.8), rgba(255,255,255,0));
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle1 {
+    left: 10%;
+    bottom: 5%;
+}
+.circle2 {
+    top: 5%;
+    right: 15%;
+}
+
+.dashboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(to right bottom, var(--primary-glass), var(--secondary-glass));
+    border-radius: 1.5rem;
+}
+
+.menu-item {
+    display: flex;
+    margin: 1.5rem 0rem;
+    padding: .5rem 2.5rem;
+    align-items: center;
+}
+
+.menu-item h2{
+    padding: 0rem 1rem;
+}
+
+/*Sobre*/
+
+.about {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    justify-content: space-evenly;
+    margin: 2rem;
+}
+
+.card {
+    display: flex;
+    background: linear-gradient(to right bottom, rgba(255,255,255,.8), rgba(255,255,255,.3));
+    border-radius: 1rem;
+    margin: 1.5rem 0rem;
+    padding: 1.6rem;
+    box-shadow: 6px 6px 20px rgba(122,122,122,.3);
+    justify-content: space-between;
+    height: 8rem;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    height: 100%;
+}
+
+.card-info p{
+    font-size: .8rem;
+}
+
+.progress-bar {
+    background: var(--secondary-text);
+    width: 100%;
+    height: 25%;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.progress {
+    background: linear-gradient(to right top, var(--primary-color), var(--secondary-color));
+    border-radius: 1rem;
+    width: 60%;
+    height: 100%;
+}
+
+.percentage {
+    font-weight: bold;
+    background: linear-gradient(to right top, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
