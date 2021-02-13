@@ -9,7 +9,28 @@
     <title>Anderson Paiva</title>
 </head>
 <body>
-    <main>
+    <div class="dashboard-mobile">
+        <div class="menu-mobile">
+            <div class="menu-item actived" >
+                <p class="icon"><i class="fas fa-user-tie"></i></p>
+                <h2>Sobre</h2>
+            </div>
+            <div class="menu-item" onclick="location.href='/certificates.html';">
+                <p class="icon"><i class="fas fa-medal"></i></p>
+                <h2>Certificados</h2>
+            </div>
+            <div class="menu-item" onclick="location.href='/projects.html';">
+                <p class="icon"><i class="fas fa-box-open"></i></p>
+                <h2>Projetos</h2>
+            </div>
+            <div class="menu-item" onclick="location.href='/contacts.html';">
+                <p class="icon"><i class="fas fa-address-card"></i></p>
+                <h2>Contato</h2>
+            </div>
+        </div>
+        <div class="social"></div>
+    </div>
+    <main data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-scale="1.02">
         <div class="dashboard">
             <div class="user">
                 <img src="images/profile.jpg" alt="Foto de Perfil">
@@ -112,7 +133,8 @@
     </main>
     <div class="circle1"></div>
     <div class="circle2"></div>
+    <script src="./index.js"></script>
+    <script src="./tilt.js"></script>
+    <script src="https://kit.fontawesome.com/f366fcdfac.js" crossorigin="anonymous"></script>
 </body>
-<script src="./index.js"></script>
-<script src="https://kit.fontawesome.com/f366fcdfac.js" crossorigin="anonymous"></script>
 </html>

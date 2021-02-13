@@ -56,6 +56,7 @@ main{
     z-index: 5;
     backdrop-filter: blur(2rem);
     display: flex;
+    transition: .3s all;
 }
 
 .circle1,.circle2{
@@ -91,6 +92,21 @@ main{
     text-align: center;
     background: linear-gradient(to right bottom, var(--primary-glass), var(--secondary-glass));
     border-radius: 1.5rem;
+    transition: .3s all;
+}
+
+.dashboard-mobile {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(to top right, var(--primary-glass), var(--secondary-glass));
+    border-radius: 1.5rem;
+    transition: .3s all;
+    display: none;
 }
 
 .user img {
@@ -101,6 +117,13 @@ main{
 .menu{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu-mobile{
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -184,6 +207,7 @@ main{
     justify-content: space-between;
     height: 8rem;
     transition: all .2s;
+    align-items: center;
 }
 
 .card:hover {
@@ -195,7 +219,7 @@ main{
     align-items: center;
     justify-content: center;
     height: 5rem;
-    /* margin-right: 10px; */
+    margin-right: 10px;
     transition: all .2s;
 }
 
@@ -285,7 +309,8 @@ main{
 
 .contacts ul{
     display: flex;
-    width: 90%;
+    flex-direction: row;
+    height: 90%;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -298,8 +323,8 @@ main{
 
 .contacts ul li a{
     top: 0;
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -323,14 +348,116 @@ main{
 }
 
 .contacts ul li a:hover{
-    width: 120px;
-    height: 120px;
+    width: 6.5rem;
+    height: 6.5rem;
 }
 
 .contacts ul li a:hover p{
     font-size: 1rem;
     margin-top: 5px;
 }
+
+
+/*TABLET VERSION*/
+/*1200px screen*/
+
+@media screen and (max-width: 1200px) {
+    main{
+        width: 80%;
+    }
+
+    .card img {
+        height: 4rem;
+    }
+
+    .card-info{
+        width: 100%;
+    }
+}
+/*900px screen*/
+@media screen and (max-width: 900px) {
+    
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        flex: .5;
+        /* justify-content: space-evenly; */
+        overflow: hidden;
+        /* margin: 2rem; */
+        align-items: center;
+    }
+
+    .user img {
+        width: 5rem;
+        border-radius: 50%;
+    }
+
+    .menu-item{
+        justify-content: center;
+        padding: 1rem 2.5rem;
+    }
+
+    .user h3, .user p {
+        font-size: 0rem;
+    }
+
+    .menu-item h2{
+        font-size: 0rem;
+        padding: 0rem;
+    }
+
+    .menu-item p{
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+    }
+
+    .cards p {
+        font-size: 1rem;
+    }
+    .card img {
+        height: 4rem;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .card img {
+        display: none;
+    }
+
+    .card-info{
+        width: 100%;
+    }
+}
+
+
+
+/*SmartPhone VERSION*/
+
+@media screen and (max-width: 750px) {
+    .dashboard {
+        display: none;
+    }
+
+    .dashboard-mobile{
+        display: flex;
+    }
+
+    .contacts ul{
+        flex-direction: column;
+    }
+    .contacts ul li a{
+        width: 6rem;
+        height: 6rem;
+    }
+    .contacts ul li a:hover{
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+}
+
 
 
 /*SCROLLBAR*/
